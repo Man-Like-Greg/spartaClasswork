@@ -1,0 +1,23 @@
+h1 {
+	color: red;
+	text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+	text-decoration: underline;
+}
+h2 {
+	text-shadow: 1px 1px 1px #000;
+}
+p {
+	color: blue;
+}
+.special {
+	font-weight: bold;
+}
+.links {
+	color: pink;
+	font-family: Courier, Monaco, monospace;
+}
+a {
+	font-style: italic;
+	color: green;
+}

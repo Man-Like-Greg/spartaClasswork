@@ -1,0 +1,115 @@
+*{
+	border: 2px solid black;
+}
+body {
+	color: red;
+}
+
+h1 {
+
+	color: blue;
+	text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+	text-decoration: underline;
+}
+
+h2 {
+
+	color: green;
+	font-size: 15px;
+}
+
+h3 {
+
+	font-family: serif;
+	text-decoration: underline;
+}
+
+p {
+
+	color: yellow;
+	font-style: italic;
+}
+
+ul {
+	color: pink;
+}
+
+.football {
+	width: 200px;
+	height: 200px;
+}
+
+.player {
+	width: 300px;
+	height: 300px;
+
+}
+
+.logo {
+	width: 400px;
+	height: 400px;
+}
+
+#list {
+	font-weight: bold;
+	font-family: courier;
+}
+
+/*section:nth-child(2) {*/
+	/*background-color: lightgrey;*/
+/*}*/
+/*section:nth-child(3) {*/
+	/*background-color: grey;*/
+/*}*/
+
+
+/* Layout */
+
+header {
+	
+	border: 2px solid blue;
+	margin: 20px;
+/*	width: 50%;
+	height: 20%;*/
+}
+
+main {
+	border: 2px solid red;
+	display: inline-block;
+	/*margin: 20px;*/
+/*	width: 50%;
+	height: 50%;*/
+}
+
+aside {
+	background-color: purple;
+/*	padding: 20px;
+	margin: 20px;*/
+	width: 33%;
+	/*height: 250px;*/
+	display: inline-block;
+	float: left;
+}
+
+article {
+	border: 2px solid yellow;
+}
+
+footer {
+
+	border: 2px solid pink;
+	/*margin: auto;*/
+/*	width: 50%;
+	height: 20%;*/
+}
+
+section {
+/*	padding: 20px;
+	margin: 20px;*/
+	width: 66%;
+	/*height: 250px;*/
+	display: inline-block;
+	float: right;
+}
+
