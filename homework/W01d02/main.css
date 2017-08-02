@@ -1,0 +1,119 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+*{
+	border: 2px solid black;
+}
+/*body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-image: url("../images/bgtile.png");
+  background-repeat: repeat-x;
+}
+h1 {
+	color: blue;
+}
+img {
+	width: 300px;
+	height: 400px;
+}
+ul {
+	list-style-type: none;
+}
+aside {
+	width: 200px
+	height:500px;
+	float: left;
+}
+main {
+	width: 300px;
+	height: 400px;
+}*/
+body {
+	font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	margin: 0;
+  	background-image: url("images/bgtile.png");
+  	background-repeat: repeat-x;
+}
+
+main {
+	height: 650px;
+	width: ;
+}
+
+header {
+	height: 100px;
+}
+
+#Wrapper {
+	min-height: 500px;
+	width: 500px;
+	display: inline-block;
+	float: right;
+
+}
+
+#logo {
+	min-height: 100px;
+	width: 350px;
+	height: 100px;
+	display: inline-block;
+	float: left;
+}
+
+#login {
+	width: 110px;
+	display: inline-block;
+	position: left;
+}
+
+.home {
+	height: 24px;
+}
+
+.login {
+	width: 50px;
+	display: inline;
+	color: white;
+}
+
+.content {
+	background-image: url("images/frame.png");
+	max-height: 300px;
+	width: 500px;
+	float: right;
+}
+
+h1 {
+	color: blue;
+	width: 250px;
+}
+
+p {
+	width: 400px;
+	position: central;
+}
+
+.sidebar {
+	width: 300px
+	height: 600px;
+}
+
+img {
+
+}
+
+footer {
+	color: blue;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+	width: 100px;
+	display: inline-block;
+}
