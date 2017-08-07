@@ -1,0 +1,92 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+/**{
+	border: 2px solid black;
+	box-sizing: border-box;
+}*/
+
+body {
+	background-color: #fff;
+	background-image: url("../images/bgtile.png");
+	background-repeat: repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+section {
+	display: inline-block;
+	/*height: 80%;*/
+}
+
+#container {
+	margin: 90px auto 0 auto;
+	width: 880px;
+}
+
+h2 {
+	color: #06365f;
+	margin-top: 0;
+}
+
+#badges {
+	margin-right: 10px;
+}
+
+#left {
+	
+	float: left;
+	
+}
+
+#right {
+	float: right;
+	width: 550px;
+}
+
+#login {
+	color: white;
+}
+
+main {
+	background-image: url("../images/frame.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 40px;
+	width: 488px;
+}
+
+footer {
+	display: inline-block;
+	text-align: center;
+	clear: both;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	display: inline-block;
+	margin:  0 20px;
+	padding: 0;
+
+}
+
+li {
+	display: inline;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin:  0 10px;
+	font-size: 11px;
+	color: :#999;
+}
+
+.copysign {
+	color: #bababa;
+}
+
+button {
+	background-color: #06365f;
+}
