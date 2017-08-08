@@ -1,3 +1,4 @@
+
 function userInput() {
     alert("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
@@ -12,14 +13,14 @@ function computerInput() {
         return "scissors";
     }
 }
-function firstToFive() {
-    alert("You ready to play Rock, Paper, Scissors");
+function firstToThree() {
+    alert("You ready to play first To 3 Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
 
-    while(playerWins < 5 && computerWins < 5) {
-        var userChoice = userMove();
-        var computerPick = cpuMove();
+    while(playerWins < 3 && computerWins < 3) {
+        var userChoice = userPlay();
+        var computerPick = cpuPlay();
         var winner = compare(userChoice, computerPick);
         if (winner === "player") {
             playerWins ++;
@@ -33,10 +34,10 @@ function firstToFive() {
     }
     return [playerWins, computerWins];
 }
-function userMove(play) {
+function userPlay(play) {
     return play || userInput();
 }
-function cpuMove(play) {
+function cpuPlay(play) {
     return play || computerInput();
 }
 function compare(choice1,choice2) {
@@ -49,4 +50,5 @@ function compare(choice1,choice2) {
         winner = "computer";
     } return winner;
 }
-firstToFive()
+
+firstToThree()
