@@ -1,44 +1,43 @@
-//Set initial state variables
-
-//find numbers
+//*-------------1st section----------------*//
+//-------find numbers
 var numbers = document.getElementsByClassName("number");
 // console.log(numbers);
 
-//find operators
+//-------find operators
 var operators = document.getElementsByClassName("operator");
 // console.log(numbers);
 
-//find equals
+//--------find equals
 var eq = document.getElementsByClassName("eq")[0];
 // console.log(eq);
 
-//find clear
+//--------find clear
 var clear = document.getElementsByClassName("clear")[0];
 // console.log(clear);
 
-//find display
+//-------find display
 var display = document.getElementsByClassName("display")[0];
 // console.log(display);
 
-//variable for firstNumber in calculation
+//----------variable for firstNumber in calculation
 var firstNumber = null;
 // console.log("firstNumber", firstNumber);
 
-//variable for secondNumber in calculation
+//---------variable for secondNumber in calculation
 var secondNumber = null;
 // console.log("secondNumber", secondNumber);
 
-//variable for operator clicked
+//-----------variable for operator clicked
 var operator = null;
 // console.log("operator", operator);
 
-//variable for answer of calculations
+//-----------variable for answer of calculations
 var answer = null;
 // console.log("answer", answer);
 
-//-------------1st section----------------
+//*-------------2nd section----------------*//
 
-//setup event listeners
+//---------------setup event listeners------------------
 function setUpEventListeners() {
 	for (var i=0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", upDateAndDisplayNumber)
@@ -54,188 +53,79 @@ function setUpEventListeners() {
     clear.addEventListener("click", function() {
     	clearCalculator()
     })
-
 }
-//Functions for calculator
-//add
+//-----------------Functions for calculator-------------
+//--------add
 function add(firstNumber, secondNumber) {
-	// console.log("getting here")
+	// console.log("getting here") // testing to see if it gets to here
 	return firstNumber + secondNumber;
 }
-//subtract
+//--------subtract
 function subtract(firstNumber, secondNumber) {
-	// console.log("getting here")
+	// console.log("getting here") // testing to see if it gets to here
 	return firstNumber - secondNumber;
 }
-//divide
+//--------divide
 function divide(firstNumber, secondNumber) {
-	// console.log("getting here")
+	// console.log("getting here") // testing to see if it gets to here
 	return firstNumber / secondNumber;
 }
-//multiply
+//---------multiply
 function multiply(firstNumber, secondNumber) {
-	// console.log("getting here")
+	// console.log("getting here") // testing to see if it gets to here
 	return firstNumber * secondNumber;
 }
-
-//--------------------------
-
-//calculation functions
+//------------------calculation functions------------------
 function calculation(first_Number, operator, second_Number) {
-	console.log(firstNumber, operator, secondNumber)
+	switch (operator) {
+		case "+":
+			display.value = add(firstNumber, secondNumber);
+			break;
+		case "-":
+			display.value = subtract(firstNumber, secondNumber);
+			break;
+		case "/":
+			display.value = divide(firstNumber, secondNumber);
+			break;
+		case "x":
+			display.value = multiply(firstNumber, secondNumber);
+			break;
+	}
 }
-
-//---------------------------------------------
-
-//clear the calculator
+//----------------clear the calculator-------------------------
 function clearCalculator() {
-	console.log(clearCalculator)
+	firstNumber = null;
+	secondNumber = null;
+	operator = null;
+	display.value = "";
+	// console.log(firstNumber, secondNumber, operator) // this shows null null null 
 }
-
-//display and store buttons clicked
+//------------display and store buttons clicked------------------
 function upDateAndDisplayNumber(){
-	console.log("button clicked");
-	console.log("this", this);
-//display and store the operators 
+	// console.log("button clicked"); // tells you when a button is clicked
+	var button = this.value;
+	display.value = button;
+	if (firstNumber == null) {
+		firstNumber = parseFloat(button)
+		// console.log("1st ",firstNumber); // to show 1st number
+	} else {
+		secondNumber = parseFloat(button);
+		// console.log("2nd", secondNumber); // to show 2nd number
+	}
+//-----------display and store the operators------------------------
 }
 function upDateAndDisplayOperator(){
-	console.log("button clicked");
-	console.log("this", this);
-
+	// console.log("button clicked"); ////tells you when its clicked
+	operator = this.value;
+	display.value = operator;
+	// console.log(operator); //// to show the operator 
 }
-
 
 
 setUpEventListeners();
 
-
-
-
-
-/*------- 
-// Setup initial state variables
-
-// Variables defined in global scope, not the best idea
-
-// Setup eventListeners
-
-// Functions for calculator
-
-document.addEventListener("DOMContentLoaded", function(){
-	//------------- BUTTONS
-	var buttons = document.getElementsByClassName("number");
-	var operators = document.getElementsByClassName("operator");
-	var screen = document.getElementsByClassName("display");
-	var clear = document.getElementsByClassName("clear");
-	var equals = document.getElementsByClassName("eq");
-	var elements = document.getElementsByTagName("input");
-	var numberOne = null;
-	var numberTwo = null;
-
-	for (var i=0; i < buttons.length; i++) {
-    var b = buttons[i];
-    b.addEventListener("click", function(event){
-        console.log(this.value + "  was clicked");
-        }) 
-    }
-	for (var i=0; i<operators.length; i++) {
-	    var b = operators[i];
-	    b.addEventListener("click", function(event){
-	        console.log(this.value + " was clicked");
-	    })
-	}
-	for (var i=0; i<clear.length; i++) {
-		var b = clear[i];
-	    b.addEventListener("click", function(event){
-	        console.log(this.value + " was clicked");
-	    })
-	}
-	for (var i=0; i<equals.length; i++) {
-		var b = equals[i];
-	    b.addEventListener("click", function(event){
-	        console.log(this.value + " was clicked");
-	    })
-	}
-	for(var i=0; i<elements.length; i++){
-		  if(elements[i].innerHTML === "="){
-			    elements[i].addEventListener("click", calculate(i));
-			    console.log(this.value + " was clicked");
-		}	else {
-			   elements[i].addEventListener("click", addToCurrentValue(i));
-			   console.log(this.value + " was clicked");
-		}
-	}
-	clear.onclick = function () {
-    screen.innerHTML = "";
-    console.log(this.value + " was clicked");
-  	}
- //  	function newDiv(text){
-	//     var newDiv= document.createElement("div");
-	//     newDiv.className="save";
-	//     newDiv.innerHTML=text;
-	//     document.body.ul.li.appendChild(newDiv);
-	// }
-  	function addToCurrentValue (i){
-		return function() {
-			if (elements[i].innerHTML === "/") {
-               screen.innerHTML  +=  "/ " ;
-      		}	else if(elements[i].innerHTML === "x"){
-			      screen.innerHTML += "*";
-		   	} else {
-			   	screen.innerHTML  += elements[i].innerHTML;
-		   	}
-		}
-	}
-	function equals(){
-			if (operators === "+") {
-				var sum = numberOne + numberTwo;
-				console.log(sum);
-			} else if (operators === "-") {
-				var sum = numberOne - numberTwo;
-				console.log(sum);
-			} else if (operators === "/") {
-				var sum = numberOne / numberTwo;
-				console.log(sum);
-			} else if (operators === "x") {
-				var sum = numberOne * numberTwo;
-				console.log(sum);
-			}
-		}
-   	function calculate(i) {
-    	return function () {
-        	screen.innerHTML = equals(screen.innerHTML);    		
-  		}
-	}
-
-})
-
-// function add(number1, number2){
- //    	return number1 + number2
-	// }
-	// function subtract(number1, number2) {
- //    	return number1 - number2
-	// }
-	// function divide(number1, number2) {
- //    	return number1 / number2
-	// }
-	// function multiply(number1, number2) {
- //    	return number1 * number2
-	// }
-	// function Clear() {
-	// 	var Current = "0";
- //   		document.Calculator.Display.value = Current;
- //   	}
-
-
-// buttonClicked();
-// 	function buttonClicked(){
-// 		console.log("button was Clicked")
-	
-// 			for (var i = 0; i < buttons.length; i++) {
-// 			 	var b = buttons[i]
-// 			 	b.addEventListener("click", function(event) {
-// 			 		console.log(this.value + "was Clicked")
-// 			 	})
-// 			} buttons.addEventListener("click", buttonClicked);
-// 		} 
-----*/
+/*-----
+///----- this is for testing the operation functions
+var result = add(4, 2)
+console.log(result)
+------*/
