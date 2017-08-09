@@ -1,3 +1,103 @@
+//Set initial state variables
+
+//find numbers
+var numbers = document.getElementsByClassName("number");
+// console.log(numbers);
+
+//find operators
+var operators = document.getElementsByClassName("operator");
+// console.log(numbers);
+
+//find equals
+var eq = document.getElementsByClassName("eq")[0];
+// console.log(eq);
+
+//find clear
+var clear = document.getElementsByClassName("clear")[0];
+// console.log(clear);
+
+//find display
+var display = document.getElementsByClassName("display")[0];
+// console.log(display);
+
+//variable for firstNumber in calculation
+var firstNumber = null;
+// console.log("firstNumber", firstNumber);
+
+//variable for secondNumber in calculation
+var secondNumber = null;
+// console.log("secondNumber", secondNumber);
+
+//variable for operator clicked
+var operator = null;
+// console.log("operator", operator);
+
+//variable for answer of calculations
+var answer = null;
+// console.log("answer", answer);
+
+//-------------1st section----------------
+
+//setup event listeners
+function setUpEventListeners() {
+	for (var i=0; i < numbers.length; i++) {
+    numbers[i].addEventListener("click", upDateAndDisplayNumber)
+       
+    }
+//Functions for calculator
+	for (var i=0; i < operators.length; i++) {
+    operators[i].addEventListener("click", upDateAndDisplayOperator)
+       
+    }
+    eq.addEventListener("click", function() {
+    	calculation(firstNumber, operator, secondNumber);
+    })
+    clear.addEventListener("click", function() {
+    	clearCalculator()
+    })
+
+}
+
+//add
+//subtract
+//divide
+//multiply
+
+//--------------------------
+
+//calculation functions
+function calculation(first_Number, operator, second_Number) {
+	console.log(firstNumber, operator, secondNumber)
+}
+
+//---------------------------------------------
+
+//clear the calculator
+function clearCalculator() {
+	console.log(clearCalculator)
+}
+
+//display and store buttons clicked
+function upDateAndDisplayNumber(){
+	console.log("button clicked");
+	console.log("this", this);
+//display and store the operators 
+}
+function upDateAndDisplayOperator(){
+	console.log("button clicked");
+	console.log("this", this);
+
+}
+
+
+
+setUpEventListeners();
+
+
+
+
+
+/*------- 
 // Setup initial state variables
 
 // Variables defined in global scope, not the best idea
@@ -90,11 +190,9 @@ document.addEventListener("DOMContentLoaded", function(){
     	return function () {
         	screen.innerHTML = equals(screen.innerHTML);    		
   		}
-	}	
-/
-})
+	}
 
-				
+})
 
 // function add(number1, number2){
  //    	return number1 + number2
@@ -125,3 +223,4 @@ document.addEventListener("DOMContentLoaded", function(){
 // 			 	})
 // 			} buttons.addEventListener("click", buttonClicked);
 // 		} 
+----*/
