@@ -40,39 +40,39 @@ var answer = null;
 //---------------setup event listeners------------------
 function setUpEventListeners() {
 	for (var i=0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", upDateAndDisplayNumber)
-       
+    numbers[i].addEventListener("click", upDateAndDisplayNumber);
+      
     }
 	for (var i=0; i < operators.length; i++) {
-    operators[i].addEventListener("click", upDateAndDisplayOperator)
+    operators[i].addEventListener("click", upDateAndDisplayOperator);
        
     }
     eq.addEventListener("click", function() {
     	calculation(firstNumber, operator, secondNumber);
     })
     clear.addEventListener("click", function() {
-    	clearCalculator()
+    	clearCalculator();
     })
 }
 //-----------------Functions for calculator-------------
 //--------add
 function add(firstNumber, secondNumber) {
-	// console.log("getting here") // testing to see if it gets to here
+	// console.log("getting here"); // testing to see if it gets to here
 	return firstNumber + secondNumber;
 }
 //--------subtract
 function subtract(firstNumber, secondNumber) {
-	// console.log("getting here") // testing to see if it gets to here
+	// console.log("getting here"); // testing to see if it gets to here
 	return firstNumber - secondNumber;
 }
 //--------divide
 function divide(firstNumber, secondNumber) {
-	// console.log("getting here") // testing to see if it gets to here
+	// console.log("getting here"); // testing to see if it gets to here
 	return firstNumber / secondNumber;
 }
 //---------multiply
 function multiply(firstNumber, secondNumber) {
-	// console.log("getting here") // testing to see if it gets to here
+	// console.log("getting here"); // testing to see if it gets to here
 	return firstNumber * secondNumber;
 }
 //------------------calculation functions------------------
@@ -98,7 +98,7 @@ function clearCalculator() {
 	secondNumber = null;
 	operator = null;
 	display.value = "";
-	// console.log(firstNumber, secondNumber, operator) // this shows null null null 
+	// console.log(firstNumber, secondNumber, operator); // this shows null null null 
 }
 //------------display and store buttons clicked------------------
 function upDateAndDisplayNumber(){
@@ -115,14 +115,13 @@ function upDateAndDisplayNumber(){
 //-----------display and store the operators------------------------
 }
 function upDateAndDisplayOperator(){
-	// console.log("button clicked"); ////tells you when its clicked
+	// console.log("button clicked"); //tells you when its clicked
 	operator = this.value;
 	display.value = operator;
-	// console.log(operator); //// to show the operator 
+	// console.log(operator); // to show the operator 
 }
 
-
-setUpEventListeners();
+setUpEventListeners(); // calls the start of the code
 
 /*-----
 ///----- this is for testing the operation functions
