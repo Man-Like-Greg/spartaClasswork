@@ -7,7 +7,7 @@ $(function (event) {
 	var items = $("li"); // give us all the list 
 	// console.log(items);
 
-	// var done = document.querySelectorAll("li.done");
+	// var done = document.querySelectorAll("li.done"); // is the same as below
 	var done = $("li.done");
 	// console.log(done);
 
