@@ -1,3 +1,4 @@
+//----------------------Intro to loops--------------------
 var engineeringClass = ["greg", "joe", "naren", "melson", "will", "kane", "dino", "melinda","sabirin"]
 //-----Simple pring names----
 for(var i=0;i<engineeringClass.length;i++) {
