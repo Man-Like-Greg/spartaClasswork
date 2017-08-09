@@ -44,7 +44,6 @@ function setUpEventListeners() {
     numbers[i].addEventListener("click", upDateAndDisplayNumber)
        
     }
-//Functions for calculator
 	for (var i=0; i < operators.length; i++) {
     operators[i].addEventListener("click", upDateAndDisplayOperator)
        
@@ -57,11 +56,27 @@ function setUpEventListeners() {
     })
 
 }
-
+//Functions for calculator
 //add
+function add(firstNumber, secondNumber) {
+	// console.log("getting here")
+	return firstNumber + secondNumber;
+}
 //subtract
+function subtract(firstNumber, secondNumber) {
+	// console.log("getting here")
+	return firstNumber - secondNumber;
+}
 //divide
+function divide(firstNumber, secondNumber) {
+	// console.log("getting here")
+	return firstNumber / secondNumber;
+}
 //multiply
+function multiply(firstNumber, secondNumber) {
+	// console.log("getting here")
+	return firstNumber * secondNumber;
+}
 
 //--------------------------
 
