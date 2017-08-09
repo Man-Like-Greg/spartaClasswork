@@ -6,22 +6,28 @@ var player2 = [];
 // find clear button
 var clearBoard = $("#reset")
 // find the number of turns
-var whosTurns = $(".playerTurns");
+var whosTurn;
 
 // functions for the jQuery to work
 $(function (event) {
 	// function for the each player to make a move
 	$(boxes).each(function(index, box){
 	  console.log($(box).attr("data-num")); // show the data numbers on the console
-
-
-	})
-	$(boxes).on("click", function() {
+	  	// assign the player1 moves to the grid
+	  	$(box).on("click", function() {
+	  		if (whosTurn = true) {
+	  			player1.push($(box).attr("data-num"));
+	  			$(box).addClass("X").html("X");
+	  			whosTurn = false;
+	  			console.log(player1);
+	  		}
 		
+		}) 
 	})
+	
 
 	// assign the player1 moves to the grid
-
+	
 	// assign the player2 moves to the grid
 
 	// functions for win combination
@@ -39,3 +45,6 @@ $(function (event) {
 
 
 })
+
+
+
