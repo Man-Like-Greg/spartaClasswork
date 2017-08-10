@@ -128,3 +128,25 @@ setUpEventListeners(); // calls the start of the code
 var result = add(4, 2)
 console.log(result)
 ------*/
+
+// while(playerWins < 3 && computerWins < 3) {
+		// var winner = compare(userChoice, computerPick);
+  //       if (winner === "player") {
+  //           playerWins ++;
+  //           alert ("You won that game  " + "[SCORES]: " + "Player" + "  (" + playerWins + ")  " + "--- VS ---"  + "  CPU" + "  (" + computerWins + ")");
+  //       } else if (winner === "computer") {
+  //           computerWins ++;
+  //           alert ("You lost that game  " + "[SCORES]: " + "Player" + "  (" + playerWins + ")  " + "--- VS ---" + "  CPU" + "  (" + computerWins + ")");
+  //       } else if (winner === "tie") {
+  //           alert ("That was a tie  " + "[SCORES]: " + "Player" + "  (" + playerWins + ")  " + "--- VS ---" + "  CPU" + "  (" + computerWins + ")");
+  //       }
+	//}
+
+// clear.addEventListener("click", function() {
+//     	clearCalculator();
+// function clearCalculator() {
+// 	player1 = null;
+// 	player2 = null;
+// 	operator = null;
+// 	
+// }
