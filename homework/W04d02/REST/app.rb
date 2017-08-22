@@ -8,3 +8,7 @@ end
 get "/movies/new" do 
 	"I'm faster than Flash"
 end
+
+post "/movies" do 
+	"Hulk smash"
+end
