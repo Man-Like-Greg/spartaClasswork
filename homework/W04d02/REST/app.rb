@@ -20,3 +20,7 @@ end
 get "/movies/:id/edit" do 
 	"Team Avengers"
 end
+
+put "/movies/:id" do 
+	"King greg is Ironman"
+end
