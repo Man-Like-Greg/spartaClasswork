@@ -35,12 +35,16 @@ puts ">> #{a_result}"
 
 def BMI
 	puts "BMI Calculator" if user_input = "BMI"
-	print ">>"
+	
 	user_input = get.chomp.split(" ")
 	height = user_input[0]
 	weight = user_input[1]
 
-	bmi_result = case 
+	bmi = (weight/(height ** 2))
+end
+
+def bmi_result bmi
+	bmi = case 
 	when <16 then puts "underweight"
 	when	>18.5 && < 25 then puts "normal"
 	when	>25 && <30 then puts "overweight"
