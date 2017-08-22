@@ -12,3 +12,7 @@ end
 post "/movies" do 
 	"Hulk smash"
 end
+
+get "/movies/:id" do 
+	"Superman returns"
+end
