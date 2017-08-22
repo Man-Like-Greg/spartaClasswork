@@ -16,3 +16,7 @@ end
 get "/movies/:id" do 
 	"Superman returns"
 end
+
+get "/movies/:id/edit" do 
+	"Team Avengers"
+end
