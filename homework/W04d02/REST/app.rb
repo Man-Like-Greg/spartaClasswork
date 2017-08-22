@@ -28,3 +28,7 @@ end
 delete "/movies/:id" do 
 	"Marvel over DC"
 end 
+
+post "/movies" do 
+	"King Kong is the real King of the jungle"
+end
