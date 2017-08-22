@@ -24,3 +24,7 @@ end
 put "/movies/:id" do 
 	"King greg is Ironman"
 end
+
+delete "/movies/:id" do 
+	"Marvel over DC"
+end 
