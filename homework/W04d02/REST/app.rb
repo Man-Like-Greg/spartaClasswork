@@ -36,3 +36,7 @@ end
 get "/movies/:id" do 
 	"saving private ryan"
 end
+
+get "/movies/new" do 
+	"Back to the Future"
+end
