@@ -32,3 +32,7 @@ end
 post "/movies" do 
 	"King Kong is the real King of the jungle"
 end
+
+get "/movies/:id" do 
+	"saving private ryan"
+end
