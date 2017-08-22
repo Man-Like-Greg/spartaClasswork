@@ -31,11 +31,11 @@ $(function (event) {
 	// is the same as:
 	$("#count").html("5");
 
-	$("#count").css("color", "blue")
+	$("#count").css("color", "blue");
 
 	$("li").addClass("done");
 
-	$("#count").html("10").css("color" ,"red")
+	$("#count").html("10").css("color" ,"red");
 
 	var button = $("<button id=\"myButton\">Click Me</button>");
 	$("body").append(button);
