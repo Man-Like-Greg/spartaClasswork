@@ -10,6 +10,35 @@ class MoviesController < Sinatra::Base
 		register Sinatra::Reloader
 	end
 
+	get "/" do
+		"HOMEPAGE"
+	end
+
+	get "/new" do
+		"NEW"
+	end
+
+	get "/:id" do
+		"SHOW"
+	end
+
+	post "/" do 
+		"CREATE"
+	end
+
+	get "/:id/edit" do
+		"EDIT"
+	end
+
+	put "/:id" do 
+		"UPDATE"
+	end
+
+	delete "/:id" do
+		"DESTROY"
+	end
+	
+
 
 
 end
