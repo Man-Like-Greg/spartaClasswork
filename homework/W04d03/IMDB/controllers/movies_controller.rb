@@ -6,6 +6,7 @@ class MoviesController < Sinatra::Base
 	#setting the view directory 
 	set :view, Proc.new{ File.join(root, "views") }
 
+	#config to register with sinatra
 	configure :development do 
 		register Sinatra::Reloader
 	end
@@ -37,7 +38,7 @@ class MoviesController < Sinatra::Base
 	delete "/:id" do
 		"DESTROY"
 	end
-	
+
 
 
 
