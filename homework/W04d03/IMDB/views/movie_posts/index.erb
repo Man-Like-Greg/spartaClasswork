@@ -1,0 +1,14 @@
+<center>
+	<h1>GREG's IMDB</h1><img class="home_title" src="GREGs-IMDB.png">
+</center> 
+<% @movie_posts.each do |post| %>
+	<div>
+		<h3>
+			<a href="/<%= post[:id] %>"><%= post[:title] %></a>
+		</h3>
+		<p><%= post[:content] %></p>
+		<p><%= post[:rate] %></p>
+		<p><%= post[:movie_link] %></p>
+		
+	</div>
+<% end %>
