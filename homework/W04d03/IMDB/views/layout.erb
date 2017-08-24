@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><%= @title %></title>
-</head>
-<body>
-	<%= erb(:'partials/navigation', :layout => false) %>
+	<head>
+		<title><%= @title %></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<%= erb(:'partials/navigation', :layout => false) %>
 
-	<!-- out template content will be injected here -->
-	<%= yield %>
-</body>
+		<!-- out template content will be injected here -->
+		<%= yield %>
+	<footer>
+	  <ul>
+	    <li>About Us</li>
+	    <li>Support</li>
+	    <li>Blog</li>
+	    <li>Press</li>
+	    <li>Terms</li>
+	  </ul>
+	</footer>
+	</body>
 </html>
