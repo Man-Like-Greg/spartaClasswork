@@ -1,5 +1,14 @@
 class MoviesController < Sinatra::Base
 
+
+	$movie_posts =[
+		id: 0,
+		title: "Movie name",
+		content: "Review",
+		rate: "Movie rating",
+		movie_link: "YouTube trailer link"
+	]
+
 	#setting the routes as the parent dirctory for the current file
 	set :root, File.join(File.dirname(__FILE__), "..")
 
@@ -10,36 +19,50 @@ class MoviesController < Sinatra::Base
 	configure :development do 
 		register Sinatra::Reloader
 	end
-
+	#INDEX
 	get "/" do
-		"HOMEPAGE"
+		@movie_posts = $movie_posts
+		erb :"movie_posts/index"
 	end
-
+	#NEW
 	get "/new" do
-		"NEW"
+		erb :"movie_posts/new"
 	end
-
+	#SHOW
 	get "/:id" do
-		"SHOW"
-	end
+		parameter = params[:id].to_i
 
+		@title = $movie_posts[parameter]
+		@body = $movie_posts[parameter]
+		@movie_posts = $movie_posts[parameter]
+
+		erb :"movie_posts/show"
+	end
+	#CREATE
 	post "/" do 
-		"CREATE"
-	end
+		id = $movie_posts.length
+		new_movieReview = {
+			id: id,
+			title: params[:title],
+			content: params[:content],
+			rate: params[:rate],
+			movie_link: params[:movie_link]
+		}
 
+		$movie_posts.push new_movieReview
+		redirect "/"
+	end
+	#EDIT
 	get "/:id/edit" do
-		"EDIT"
+		erb :"movie_posts/edit"
 	end
-
+	#UPDATE
 	put "/:id" do 
-		"UPDATE"
+		"UPDATE (will be covered in next lesson)"
 	end
-
+	#DELETE
 	delete "/:id" do
-		"DESTROY"
+		"DESTROY (will be covered in next lesson)"
 	end
-
-
-
 
 end
